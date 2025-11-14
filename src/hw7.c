@@ -174,26 +174,39 @@ matrix_sf* create_matrix_sf(char name, const char *expr) {
 //////////////////////////////////////
 
 int isPrecendent(char operator) { 
+    int result; 
     if (operator == '+' || operator == '-') {
-        return -1 
+        result = -1;
     }
 
     if (operator == '*' || operator == '/') { 
-        return 0 
+        result = 0; 
     }
 
     if (operator == '\'') { 
-        return 1; 
-    }
+        result = 1; 
+    } 
+
+    return result;
+
 }
+
 //////////////////
 
 char* infix2postfix_sf(char *infix) {
-    char result[strlen(*infix)+ 1]; 
+    char result[strlen(infix)+ 1]; 
     char stack[100]; 
     int top, pop; 
-    
+
     top = -1; 
+
+    for (int i = 0; i < strlen(infix); i++) { 
+        if (infix[i] == ' ') { 
+        // skip space 
+        } else { 
+
+        }
+    }
 
 }
 
