@@ -122,6 +122,7 @@ matrix_sf* create_matrix_sf(char name, const char *expr) {
     return newMatrix; 
     // no free in this func b/c we need to put this into BST 
 }
+//////////////////////////////////////
 
 char* infix2postfix_sf(char *infix) {
     return NULL;
