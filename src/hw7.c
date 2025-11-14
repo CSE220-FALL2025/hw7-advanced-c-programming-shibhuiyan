@@ -44,9 +44,9 @@ matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
         int dotSum = 0; 
         for (int k = 0; k < innerDimensions; k++) { 
             // pretending its like 1D array 
-            dotSum += mat1 ->values[i * innerDimensions+k] * mat2->values[k * numCols+j]; 
+            dotSum += mat1 ->values[(i * innerDimensions) +k] * mat2->values[(k * numCols) +j]; 
         }
-        productValues = [i*numCols + j] = dotSum; 
+        productValues[((i * numCols) + j)] = dotSum; 
     }
    }
 
