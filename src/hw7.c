@@ -204,7 +204,10 @@ char* infix2postfix_sf(char *infix) {
         if (infix[i] == ' ') { 
         // skip space 
         } else { 
-
+            if ( (infix[i] >= '0' && infix[i] <= '9') || (infix[i] >= 'a' && infix[i] <='z') 
+                || (infix[i] >= 'A' && infix[i] <= 'a') ) { 
+                    
+                }
         }
     }
 
