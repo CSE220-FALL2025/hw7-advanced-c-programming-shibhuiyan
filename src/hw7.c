@@ -226,14 +226,32 @@ char* infix2postfix_sf(char *infix) {
                             cursor++; 
                         }
                         top--; 
+                    } else { // must be an operator 
+                        while( top >= 0 && isPrecendent(infix[i]) <= isPrecendent(stack[top])) {
+                            result[cursor] = stack[top]; 
+                            cursor++; 
+                            top--; 
+                        }
+
+                        top++; 
+                        stack[top] = infix[i]; 
                     }
-                    
-
-
         }
+
+        while (top != 0) { 
+            if (stack[top] != '(') { 
+                result[cursor] = stack[top]; 
+            }
+        top--;
+        cursor++; 
+        }
+
+        result[cursor] = '\0';
+        return result; 
+        }
+
     }
 
-}
 
 matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
     return NULL;
