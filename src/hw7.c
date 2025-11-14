@@ -37,7 +37,29 @@ matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
    // mat1 cols and mat2 rows should be the same to carry out matrix multiplication 
    int innerDimensions = mat2 -> num_rows; 
 
-   int *productValues = malloc(sizeof(int) * numRows*numCols); 
+   int *productValues = malloc(sizeof(int) * numRows*numCols);
+   
+   for (int i = 0; i < numRows; i++) { 
+    for (int j = 0; j < numCols; j++) { 
+        int dotSum = 0; 
+        for (int k = 0; k < innerDimensions; k++) { 
+            // pretending its like 1D array 
+            dotSum += mat1 ->values[i * innerDimensions+k] * mat2->values[k * numCols+j]; 
+        }
+        productValues = [row*numCols+j] = dotSum; 
+    }
+   }
+
+   matrix_sf *resultMat = malloc(sizeof(matrix_sf) + sizeof(int) * numCols*numRows); 
+   resultMat->num_rows = numRows; 
+   resultMat->num_cols = numCols; 
+
+   for (int i = 0; i < numCols*numRows; i++) { 
+    resultMat->values[i] = productValues[i]; 
+   }
+
+   free(productValues); 
+   return resultMat; 
 }
 
 matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
