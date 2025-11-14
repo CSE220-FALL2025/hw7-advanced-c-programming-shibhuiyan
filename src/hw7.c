@@ -32,7 +32,12 @@ matrix_sf* add_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
 }
 
 matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
-   return NULL;
+   int numRows = mat1 -> num_rows; 
+   int numCols = mat2 -> num_cols; 
+   // mat1 cols and mat2 rows should be the same to carry out matrix multiplication 
+   int innerDimensions = mat2 -> num_rows; 
+
+   int *productValues = malloc(sizeof(int) * numRows*numCols); 
 }
 
 matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
