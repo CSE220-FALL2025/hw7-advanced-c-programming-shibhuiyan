@@ -9,16 +9,47 @@ bst_sf* insert_bst_sf(matrix_sf *mat, bst_sf *root) {
         bst_sf *newNode = malloc(sizeof(bst_sf)); 
         newNode->mat = mat; 
 
-        return newNode; 
+        return newNode;  //Return a pointer to the root of the new BST 
     }
 
+    //if inserting matrix name comes before root's value's (a matrix) name 
+    // then it should go to the left subtree 
+    // binary trees are RECURSIVE 
+    if ((mat-> name) < (root->mat->name)) { 
+        root-> left_child = insert_bst_sf(mat, root->left_child); 
+    } else 
+        if ((mat->name) > (root->mat->name)) { 
+            root->right_child = insert_bst_sf(mat, root->right_child); 
+        }
 
+    return root; // Return a pointer to the root of the updated BST
 }
 ////////////////////
 
 matrix_sf* find_bst_sf(char name, bst_sf *root) {
-    return NULL;
+    if (!root) { 
+        return NULL; 
+    } 
+
+    while(root) { 
+    // if the root node contains the matrix in search, return the root node matrix 
+        if (root->mat->name == name) { 
+            return root-> mat; 
+        } else 
+    // have to search left subtree if the matrix in search comes before root
+            if (name < root->mat-> name) { 
+                return find_bst_sf(name, root-> left_child);         
+            } else 
+    // have to search right subtree if the matrix in search comes before root
+                if (name > root->mat-> name) { 
+                    return find_bst_sf(name, root ->right_child); 
+                }
+    }   
 }
+////////////////////
+
+
+
 
 void free_bst_sf(bst_sf *root) {
 }
