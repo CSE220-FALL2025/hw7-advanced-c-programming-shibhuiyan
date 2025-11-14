@@ -12,7 +12,23 @@ void free_bst_sf(bst_sf *root) {
 }
 
 matrix_sf* add_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
-    return NULL;
+    int totalElements = mat1 -> num_cols * mat1 ->num_rows; 
+    int *sumValues = malloc(sizeof(int)*totalElements); 
+
+    // adds the elements from m1 w/ m2 together 
+    for (int i = 0; i < totalElements; i++) { 
+        sumValues[i] = mat1 -> values[i] + mat2 -> values[i]; 
+    }
+
+    matrix_sf *resultMat = malloc(sizeof(matrix_sf) + sizeof(int) * totalElements); 
+    resultMat -> num_cols = mat2 -> num_cols; 
+    resultMat -> num_rows = mat1 -> num_rows; //already assuming they have the same dimensons so it doesnt matter which we call
+
+    for (int i = 0; i < totalElements; i++) { 
+        resultMat -> values[i] = sumValues[i]; 
+    }
+    free(sumValues);
+    return resultMat;
 }
 
 matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
