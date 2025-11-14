@@ -11,6 +11,7 @@ matrix_sf* find_bst_sf(char name, bst_sf *root) {
 void free_bst_sf(bst_sf *root) {
 }
 
+///////////////////////////////////////////
 matrix_sf* add_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
     int totalElements = mat1 -> num_cols * mat1 ->num_rows; 
     int *sumValues = malloc(sizeof(int)*totalElements); 
@@ -30,12 +31,13 @@ matrix_sf* add_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
     free(sumValues);
     return resultMat;
 }
+//////////////////////////////////////////
 
 matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
    int numRows = mat1 -> num_rows; 
    int numCols = mat2 -> num_cols; 
    // mat1 cols and mat2 rows should be the same to carry out matrix multiplication 
-   int innerDimensions = mat2 -> num_rows; 
+    mat2 -> num_rows
 
    int *productValues = malloc(sizeof(int) * numRows*numCols);
    
@@ -61,10 +63,16 @@ matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
    free(productValues); 
    return resultMat; 
 }
+//////////////////////////////////////////
 
 matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
-    return NULL;
+    int numRows = mat->num_rows; 
+    int numCols = mat->num_cols; 
+    
+    int *tansposedValues = malloc(sizeof(int) * numCols * numRows); 
+
 }
+//////////////////////////////////////////
 
 matrix_sf* create_matrix_sf(char name, const char *expr) {
     return NULL;
