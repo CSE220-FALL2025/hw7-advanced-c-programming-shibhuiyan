@@ -95,12 +95,15 @@ matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
 matrix_sf* create_matrix_sf(char name, const char *expr) {
     int numRows, numCols, totalElements; 
   
-    matrix_sf *newMatrix = malloc(sizeof(matrix_sf) + sizeof(int) * numRows*numCols); 
-    newMatrix->name = name; 
-
-    sscanf(expr, "%d %d", &numRows, &numCols); 
-
 // For example, for name = 'G', expr = "2 5 [ 8 4 9 1 13 ;-5 0 6 22 24;] "
+    sscanf(expr, "%d %d", &numRows, &numCols); //extracts two integers which would signify the row and cols 
+
+    matrix_sf *newMatrix = malloc(sizeof(matrix_sf) + sizeof(int) * numRows*numCols); 
+    newMatrix->name = name;
+    
+    newMatrix->num_rows = numRows; 
+    newMatrix->num_cols = numCols; 
+
     char *ptr = strchr(expr, '['); 
     for (int i = 0; i < totalElements; i++) { 
         while(isspace(*ptr)) { // this skips the spaces 
@@ -115,13 +118,9 @@ matrix_sf* create_matrix_sf(char name, const char *expr) {
         if (*ptr == ';') { 
             ptr++; 
         }
-
-
-     }
-
-    
-   
-
+    }
+    return newMatrix; 
+    // no free in this func b/c we need to put this into BST 
 }
 
 char* infix2postfix_sf(char *infix) {
