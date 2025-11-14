@@ -37,7 +37,7 @@ matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
    int numRows = mat1 -> num_rows; 
    int numCols = mat2 -> num_cols; 
    // mat1 cols and mat2 rows should be the same to carry out matrix multiplication 
-    mat2 -> num_rows
+   int innerDimensions = mat2 -> num_rows; 
 
    int *productValues = malloc(sizeof(int) * numRows*numCols);
    
@@ -70,7 +70,7 @@ matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
     int numCols = mat->num_cols; 
     
     int *tansposedValues = malloc(sizeof(int) * numCols * numRows); 
-
+    
 }
 //////////////////////////////////////////
 
