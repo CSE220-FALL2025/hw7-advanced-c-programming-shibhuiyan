@@ -196,18 +196,29 @@ int isPrecendent(char operator) {
 char* infix2postfix_sf(char *infix) {
     char result[strlen(infix)+ 1]; 
     char stack[100]; 
-    int top, pop; 
+    int top, cursor; 
 
     top = -1; 
-
+    cursor = 0; 
+    
     for (int i = 0; i < strlen(infix); i++) { 
+    
         if (infix[i] == ' ') { 
         // skip space 
         } else { 
-            if ( (infix[i] >= '0' && infix[i] <= '9') || (infix[i] >= 'a' && infix[i] <='z') 
-                || (infix[i] >= 'A' && infix[i] <= 'a') ) { 
-                    
+            if ( (infix[i] >= '0' && infix[i] <= '9') || (infix[i] >= 'a' && infix[i] <='z') || (infix[i] >= 'A' && infix[i] <= 'a') ) {  
+                //could've just used isalnum but i forgot it existed
+
+                result[cursor] = infix[i]; 
+                cursor++; 
+            } else 
+                // if it is not a proper operand, then check if it is an open parenthesis 
+                if (infix[i] == '(') {
+                    top++; 
+                    stack[top] = infix[i]; 
                 }
+
+
         }
     }
 
