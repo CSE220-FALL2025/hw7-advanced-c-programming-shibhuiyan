@@ -1,4 +1,6 @@
 #include "hw7.h"
+#include <stdio.h>
+#include <string.h> 
 
 bst_sf* insert_bst_sf(matrix_sf *mat, bst_sf *root) {
     return NULL;
@@ -91,7 +93,35 @@ matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
 //////////////////////////////////////////
 
 matrix_sf* create_matrix_sf(char name, const char *expr) {
-    return NULL;
+    int numRows, numCols, totalElements; 
+  
+    matrix_sf *newMatrix = malloc(sizeof(matrix_sf) + sizeof(int) * numRows*numCols); 
+    newMatrix->name = name; 
+
+    sscanf(expr, "%d %d", &numRows, &numCols); 
+
+// For example, for name = 'G', expr = "2 5 [ 8 4 9 1 13 ;-5 0 6 22 24;] "
+    char *ptr = strchr(expr, '['); 
+    for (int i = 0; i < totalElements; i++) { 
+        while(isspace(*ptr)) { // this skips the spaces 
+            ptr++; 
+        }
+
+        char *endPtr; 
+        int currentExpValue = strtol(ptr,&endPtr, 10);  
+        newMatrix->values[i] = currentExpValue; 
+        ptr = endPtr; 
+
+        if (*ptr == ';') { 
+            ptr++; 
+        }
+
+
+     }
+
+    
+   
+
 }
 
 char* infix2postfix_sf(char *infix) {
