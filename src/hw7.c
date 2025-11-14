@@ -69,8 +69,24 @@ matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
     int numRows = mat->num_rows; 
     int numCols = mat->num_cols; 
     
-    int *tansposedValues = malloc(sizeof(int) * numCols * numRows); 
+    int *transposedValues = malloc(sizeof(int) * numCols * numRows); 
+
+    for(int i = 0; i < numRows; i++) { 
+        for (int j = 0; j < numCols; j++) { 
+            transposedValues[(numRows*j) + i] = mat->values[(numCols*i)+j]; 
+        }
+    } 
+
+    matrix_sf *resultMat = malloc(sizeof(matrix_sf) + sizeof(int) * numCols*numRows); 
+    resultMat -> num_cols = numRows; 
+    resultMat->num_rows = numCols;  
     
+    for (int i = 0; i < numCols*numRows; i++) { 
+        resultMat->values[i] = transposedValues[i]; 
+    }
+
+    free(transposedValues); 
+    return resultMat; 
 }
 //////////////////////////////////////////
 
