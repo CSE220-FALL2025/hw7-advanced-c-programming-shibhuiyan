@@ -194,7 +194,7 @@ int isPrecendent(char operator) {
 //////////////////
 
 char* infix2postfix_sf(char *infix) {
-    char result[strlen(infix)+ 1]; 
+    char *result = malloc(strlen(infix) + 1); 
     char stack[100]; 
     int top, cursor; 
 
@@ -205,8 +205,8 @@ char* infix2postfix_sf(char *infix) {
     
         if (infix[i] == ' ') { 
         // skip space 
-        } else { 
-            if ( (infix[i] >= '0' && infix[i] <= '9') || (infix[i] >= 'a' && infix[i] <='z') || (infix[i] >= 'A' && infix[i] <= 'a') ) {  
+        } else {
+            if ( (infix[i] >= '0' && infix[i] <= '9') || (infix[i] >= 'a' && infix[i] <='z') || (infix[i] >= 'A' && infix[i] <= 'Z') ) {  
             //could've just used isalnum but i forgot it existed
 
                 result[cursor] = infix[i]; 
@@ -237,20 +237,20 @@ char* infix2postfix_sf(char *infix) {
                         stack[top] = infix[i]; 
                     }
         }
-
-        while (top != 0) { 
-            if (stack[top] != '(') { 
-                result[cursor] = stack[top]; 
-            }
-        top--;
-        cursor++; 
-        }
-
-        result[cursor] = '\0';
-        return result; 
-        }
-
     }
+
+    while (top >= 0) { 
+        if (stack[top] != '(') { 
+            result[cursor] = stack[top]; 
+            cursor++; 
+        }
+        top--;
+    }  
+    result[cursor] = '\0';
+
+  return result; 
+}
+
 
 
 matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
