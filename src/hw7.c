@@ -207,16 +207,27 @@ char* infix2postfix_sf(char *infix) {
         // skip space 
         } else { 
             if ( (infix[i] >= '0' && infix[i] <= '9') || (infix[i] >= 'a' && infix[i] <='z') || (infix[i] >= 'A' && infix[i] <= 'a') ) {  
-                //could've just used isalnum but i forgot it existed
+            //could've just used isalnum but i forgot it existed
 
                 result[cursor] = infix[i]; 
                 cursor++; 
             } else 
-                // if it is not a proper operand, then check if it is an open parenthesis 
+            // if it is not a proper operand, then check if it is an open parenthesis 
                 if (infix[i] == '(') {
                     top++; 
                     stack[top] = infix[i]; 
-                }
+                } else 
+                // check for close parenthesis 
+                    if (infix[i] == ')') { 
+                    // pop and output from stack until '(' is met 
+                        while (top >= 0 && stack[top] != '(') { 
+                            result[cursor] = stack[top]; 
+                            top--; 
+                            cursor++; 
+                        }
+                        top--; 
+                    }
+                    
 
 
         }
