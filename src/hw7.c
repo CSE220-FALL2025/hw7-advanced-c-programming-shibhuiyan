@@ -48,10 +48,17 @@ matrix_sf* find_bst_sf(char name, bst_sf *root) {
 }
 ////////////////////
 
-
-
-
 void free_bst_sf(bst_sf *root) {
+    if (!root) { 
+        return; 
+    }
+
+    free_bst_sf(root->right_child); 
+    free_bst_sf(root->left_child);   // bottoms up 
+
+    free(root->mat); 
+    free(root); 
+
 }
 
 ///////////////////////////////////////////
