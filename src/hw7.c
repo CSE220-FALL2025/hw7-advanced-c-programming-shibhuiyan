@@ -2,9 +2,19 @@
 #include <stdio.h>
 #include <string.h> 
 
+///////////////////////
 bst_sf* insert_bst_sf(matrix_sf *mat, bst_sf *root) {
-    return NULL;
+    // The function creates a new BST if the root is NULL.
+    if (!root) { 
+        bst_sf *newNode = malloc(sizeof(bst_sf)); 
+        newNode->mat = mat; 
+
+        return newNode; 
+    }
+
+
 }
+////////////////////
 
 matrix_sf* find_bst_sf(char name, bst_sf *root) {
     return NULL;
