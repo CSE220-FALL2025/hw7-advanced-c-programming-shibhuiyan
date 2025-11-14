@@ -173,8 +173,28 @@ matrix_sf* create_matrix_sf(char name, const char *expr) {
 }
 //////////////////////////////////////
 
+int isPrecendent(char operator) { 
+    if (operator == '+' || operator == '-') {
+        return -1 
+    }
+
+    if (operator == '*' || operator == '/') { 
+        return 0 
+    }
+
+    if (operator == '\'') { 
+        return 1; 
+    }
+}
+//////////////////
+
 char* infix2postfix_sf(char *infix) {
-    return NULL;
+    char result[strlen(*infix)+ 1]; 
+    char stack[100]; 
+    int top, pop; 
+    
+    top = -1; 
+
 }
 
 matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
