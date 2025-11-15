@@ -175,7 +175,7 @@ matrix_sf* create_matrix_sf(char name, const char *expr) {
 
 int isPrecendent(char operator) { 
     int result; 
-    if (operator == '+' || operator == '-') {
+    if (operator == '+') {
         result = 0;
     } else 
         if (operator == '*' || operator == '/') { 
@@ -279,13 +279,18 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
                 stack[top] = temp;
         } else 
             if (postfix[i] == '\'') { 
-                matrix_sf *transposedMatrix = transpose_mat_sf(stack[top]); 
+                matrix_sf *matrixOperand = stack[top]; 
+
+                matrix_sf *transposedMatrix = transpose_mat_sf(matrixOperand); 
                 stack[top] = transposedMatrix; 
                 
-                if (!(stack[top]->name >= 'A' && stack[top]->name <= 'Z')) { 
-                    free_matrix(stack[top]); 
+                if (!(matrixOperand->name >= 'A' && matrixOperand->name <= 'Z')) { 
+                    free_matrix(matrixOperand); 
                 }
-            }
+            } else 
+                 if (postfix[i] == '*' || '+') { 
+                    
+                 }
     }
 }
 
