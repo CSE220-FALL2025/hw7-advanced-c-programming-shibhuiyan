@@ -289,7 +289,27 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
                 }
             } else 
                  if (postfix[i] == '*' || '+') { 
-                    
+                    matrix_sf *rightOperand = stack[top]; 
+                    top--; 
+                    matrix_sf *leftOperand = stack[top]; 
+                    top--; 
+
+                    matrix_sf *result; 
+
+                    if (postfix[i] = '*') { 
+                        result = mult_mats_sf(leftOperand, rightOperand); 
+                    } else 
+                        if (postfix[i] == '+') { 
+                            result = add_mats_sf(leftOperand, rightOperand); 
+                        }
+
+                    if (!(leftOperand->name >= 'A' && leftOperand->name <= 'Z')) { 
+                      free_matrix(leftOperand); 
+                    }
+
+                    if (!(rightOperand->name >= 'A' && rightOperand->name <= 'Z')) { 
+                      free_matrix(rightOperand); 
+                    }
                  }
     }
 }
