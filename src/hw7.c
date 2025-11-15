@@ -326,7 +326,13 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
 
 ////////////// 
 matrix_sf *execute_script_sf(char *filename) {
-   return NULL;
+    FILE *script = fopen(filename, "r"); 
+    
+    bst_sf *newNode; 
+    matrix_sf *finalMatrix;
+
+    
+
 }
 
 // This is a utility function used during testing. Feel free to adapt the code to implement some of
