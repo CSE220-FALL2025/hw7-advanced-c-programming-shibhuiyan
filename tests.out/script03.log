@@ -1,0 +1,26 @@
+==119873== Memcheck, a memory error detector
+==119873== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==119873== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==119873== Command: ./bin/execute_script script03
+==119873== 
+execute_script: src/hw7.c:344: print_matrix_sf: Assertion `mat != NULL' failed.
+==119873== 
+==119873== Process terminating with default action of signal 6 (SIGABRT)
+==119873==    at 0x48FEB2C: __pthread_kill_implementation (pthread_kill.c:44)
+==119873==    by 0x48FEB2C: __pthread_kill_internal (pthread_kill.c:78)
+==119873==    by 0x48FEB2C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==119873==    by 0x48A527D: raise (raise.c:26)
+==119873==    by 0x48888FE: abort (abort.c:79)
+==119873==    by 0x488881A: __assert_fail_base.cold (assert.c:96)
+==119873==    by 0x489B516: __assert_fail (assert.c:105)
+==119873==    by 0x10A3B6: print_matrix_sf (hw7.c:344)
+==119873==    by 0x1093C4: main (execute_script.c:9)
+==119873== 
+==119873== HEAP SUMMARY:
+==119873==     in use at exit: 0 bytes in 0 blocks
+==119873==   total heap usage: 5 allocs, 5 frees, 1,937 bytes allocated
+==119873== 
+==119873== All heap blocks were freed -- no leaks are possible
+==119873== 
+==119873== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Aborted (core dumped)

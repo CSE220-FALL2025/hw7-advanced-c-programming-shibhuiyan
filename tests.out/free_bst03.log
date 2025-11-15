@@ -1,0 +1,622 @@
+==120522== Memcheck, a memory error detector
+==120522== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==120522== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==120522== Command: ./bin/free_bst03
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== HEAP SUMMARY:
+==120522==     in use at exit: 0 bytes in 0 blocks
+==120522==   total heap usage: 38 allocs, 38 frees, 684 bytes allocated
+==120522== 
+==120522== All heap blocks were freed -- no leaks are possible
+==120522== 
+==120522== ERROR SUMMARY: 38 errors from 20 contexts (suppressed: 0 from 0)
+==120522== 
+==120522== 1 errors in context 1 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 2 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 3 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 4 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 5 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 6 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 7 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 8 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 9 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 10 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 11 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 1 errors in context 12 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 2 errors in context 13 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 2 errors in context 14 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 2 errors in context 15 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 2 errors in context 16 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 3 errors in context 17 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 4 errors in context 18 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109452: insert_bst_sf (hw7.c:8)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x10949E: insert_bst_sf (hw7.c:19)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 5 errors in context 19 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== 
+==120522== 6 errors in context 20 of 20:
+==120522== Conditional jump or move depends on uninitialised value(s)
+==120522==    at 0x109583: free_bst_sf (hw7.c:50)
+==120522==    by 0x1095A4: free_bst_sf (hw7.c:55)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109594: free_bst_sf (hw7.c:54)
+==120522==    by 0x109416: main (free_bst03.c:12)
+==120522==  Uninitialised value was created by a heap allocation
+==120522==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==120522==    by 0x10945D: insert_bst_sf (hw7.c:9)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1094D4: insert_bst_sf (hw7.c:22)
+==120522==    by 0x1093EF: main (free_bst03.c:10)
+==120522== 
+==120522== ERROR SUMMARY: 38 errors from 20 contexts (suppressed: 0 from 0)

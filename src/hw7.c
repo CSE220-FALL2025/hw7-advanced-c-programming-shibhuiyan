@@ -143,9 +143,10 @@ matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
 
 matrix_sf* create_matrix_sf(char name, const char *expr) {
     int numRows, numCols, totalElements; 
-  
 // For example, for name = 'G', expr = "2 5 [ 8 4 9 1 13 ;-5 0 6 22 24;] "
     sscanf(expr, "%d %d", &numRows, &numCols); //extracts two integers which would signify the row and cols 
+
+    totalElements = numRows *numCols; 
 
     matrix_sf *newMatrix = malloc(sizeof(matrix_sf) + sizeof(int) * numRows*numCols); 
     newMatrix->name = name;
@@ -285,7 +286,7 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
                 stack[top] = transposedMatrix; 
                 
                 if (!(matrixOperand->name >= 'A' && matrixOperand->name <= 'Z')) { 
-                    free_matrix(matrixOperand); 
+                    free(matrixOperand); 
                 }
             } else 
                  if ((postfix[i] == '*') || (postfix[i] == '+') ) { 
@@ -307,11 +308,11 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
                     stack[top] = result; 
 
                     if (!(leftOperand->name >= 'A' && leftOperand->name <= 'Z')) { 
-                      free_matrix(leftOperand); 
+                      free(leftOperand); 
                     }
 
                     if (!(rightOperand->name >= 'A' && rightOperand->name <= 'Z')) { 
-                      free_matrix(rightOperand); 
+                      free(rightOperand); 
                     }
                  }
     }
