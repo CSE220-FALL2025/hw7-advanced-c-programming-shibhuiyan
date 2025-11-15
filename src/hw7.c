@@ -259,12 +259,37 @@ char* infix2postfix_sf(char *infix) {
   return result; 
 }
 
-
+/////////////
 
 matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
-    return NULL;
+    char *postfix = infix2postfix_sf(expr); 
+
+    matrix_sf *stack[100]; 
+    int top = -1; 
+
+    for (int i = 0; postfix[i] != '\0'; i++) { 
+        if ((postfix[i] >= 'a' && postfix[i] <= 'z') || (postfix[i] >= 'A' && postfix[i] <= 'Z')) { 
+            matrix_sf *temp = find_bst_sf(postfix[i], root);
+                if (!temp) { 
+                    free(postfix); 
+                    return NULL; 
+                }
+
+                top++; 
+                stack[top] = temp;
+        } else 
+            if (postfix[i] == '\'') { 
+                matrix_sf *transposedMatrix = transpose_mat_sf(stack[top]); 
+                stack[top] = transposedMatrix; 
+                
+                if (!(stack[top]->name >= 'A' && stack[top]->name <= 'Z')) { 
+                    free_matrix(stack[top]); 
+                }
+            }
+    }
 }
 
+////////////// 
 matrix_sf *execute_script_sf(char *filename) {
    return NULL;
 }
