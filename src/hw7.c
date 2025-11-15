@@ -211,10 +211,6 @@ char* infix2postfix_sf(char *infix) {
                 result[cursor] = infix[i]; 
                 cursor++; 
             } else 
-                if (infix[i] = '\'') { 
-                    result[cursor] = '\'';
-                    cursor++;
-                } else 
             // if it is not a proper operand, then check if it is an open parenthesis 
                 if (infix[i] == '(') {
                     top++; 
@@ -230,19 +226,27 @@ char* infix2postfix_sf(char *infix) {
                         }
                         top--; 
                     } else 
-                        if (infix[i] == '+' || infix[i] == '-' || infix[i] == '*' || infix[i] == '/' || infix[i] == '\'') { 
-                        while( top >= 0 && isPrecendent(infix[i]) <= isPrecendent(stack[top])) {
-                            result[cursor] = stack[top]; 
-                            cursor++; 
-                            top--; 
-                        }
-
-                        top++; 
-                        stack[top] = infix[i]; 
-                    }
+                        if (infix[i] == '\'') { 
+                                 while( top >= 0 && isPrecendent(infix[i]) < isPrecendent(stack[top])) {
+                                    result[cursor] = stack[top]; 
+                                    cursor++; 
+                                    top--; 
+                                 }
+                                top++; 
+                                stack[top] = infix[i]; 
+                        } else 
+                            if (infix[i] == '+' || infix[i] == '-' || infix[i] == '*' || infix[i] == '/') { 
+                                while( top >= 0 && isPrecendent(infix[i]) <= isPrecendent(stack[top])) {
+                                    result[cursor] = stack[top]; 
+                                    cursor++; 
+                                }
+                                
+                                top++; 
+                                stack[top] = infix[i]; 
+                            }
+                            
+                        }   
         }
-    }
-
     while (top >= 0) { 
         if (stack[top] != '(') { 
             result[cursor] = stack[top]; 
