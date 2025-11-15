@@ -303,6 +303,9 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
                             result = add_mats_sf(leftOperand, rightOperand); 
                         }
 
+                    top++; 
+                    stack[top] = result; 
+
                     if (!(leftOperand->name >= 'A' && leftOperand->name <= 'Z')) { 
                       free_matrix(leftOperand); 
                     }
@@ -312,6 +315,12 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
                     }
                  }
     }
+
+    matrix_sf *result = stack[top]; 
+    result->name = name; 
+    free(postfix); 
+
+    return result; 
 }
 
 ////////////// 
