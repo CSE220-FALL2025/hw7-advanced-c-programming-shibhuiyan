@@ -1,90 +1,90 @@
-==145830== Memcheck, a memory error detector
-==145830== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==145830== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==145830== Command: ./bin/execute_script script04
-==145830== 
-==145830== Use of uninitialised value of size 8
-==145830==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
-==145830==    by 0x10A507: execute_script_sf (hw7.c:344)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830==  Uninitialised value was created by a stack allocation
-==145830==    at 0x109FEF: evaluate_expr_sf (hw7.c:251)
-==145830== 
-==145830== Invalid write of size 1
-==145830==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
-==145830==    by 0x10A507: execute_script_sf (hw7.c:344)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==145830== 
-==145830== 
-==145830== Process terminating with default action of signal 11 (SIGSEGV)
-==145830==  Access not within mapped region at address 0x0
-==145830==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
-==145830==    by 0x10A507: execute_script_sf (hw7.c:344)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830==  If you believe this happened as a result of a stack
-==145830==  overflow in your program's main thread (unlikely but
-==145830==  possible), you can try to increase the size of the
-==145830==  main thread stack using the --main-stacksize= flag.
-==145830==  The main thread stack size used in this run was 8388608.
-==145830== 
-==145830== HEAP SUMMARY:
-==145830==     in use at exit: 4,734 bytes in 4 blocks
-==145830==   total heap usage: 4 allocs, 0 frees, 4,734 bytes allocated
-==145830== 
-==145830== 46 bytes in 1 blocks are still reachable in loss record 1 of 4
-==145830==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==145830==    by 0x109B91: infix2postfix_sf (hw7.c:185)
-==145830==    by 0x10A029: evaluate_expr_sf (hw7.c:252)
-==145830==    by 0x10A507: execute_script_sf (hw7.c:344)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830== 
-==145830== 120 bytes in 1 blocks are still reachable in loss record 2 of 4
-==145830==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==145830==    by 0x48E6D84: getdelim (iogetdelim.c:65)
-==145830==    by 0x10A545: execute_script_sf (hw7.c:321)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830== 
-==145830== 472 bytes in 1 blocks are still reachable in loss record 3 of 4
-==145830==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==145830==    by 0x48E5E7E: __fopen_internal (iofopen.c:65)
-==145830==    by 0x48E5E7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
-==145830==    by 0x10A395: execute_script_sf (hw7.c:314)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830== 
-==145830== 4,096 bytes in 1 blocks are still reachable in loss record 4 of 4
-==145830==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==145830==    by 0x48E51B4: _IO_file_doallocate (filedoalloc.c:101)
-==145830==    by 0x48F5523: _IO_doallocbuf (genops.c:347)
-==145830==    by 0x48F2883: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
-==145830==    by 0x48E6E0F: getdelim (iogetdelim.c:77)
-==145830==    by 0x10A545: execute_script_sf (hw7.c:321)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830== 
-==145830== LEAK SUMMARY:
-==145830==    definitely lost: 0 bytes in 0 blocks
-==145830==    indirectly lost: 0 bytes in 0 blocks
-==145830==      possibly lost: 0 bytes in 0 blocks
-==145830==    still reachable: 4,734 bytes in 4 blocks
-==145830==         suppressed: 0 bytes in 0 blocks
-==145830== 
-==145830== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
-==145830== 
-==145830== 1 errors in context 1 of 2:
-==145830== Invalid write of size 1
-==145830==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
-==145830==    by 0x10A507: execute_script_sf (hw7.c:344)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==145830== 
-==145830== 
-==145830== 1 errors in context 2 of 2:
-==145830== Use of uninitialised value of size 8
-==145830==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
-==145830==    by 0x10A507: execute_script_sf (hw7.c:344)
-==145830==    by 0x10940E: main (execute_script.c:8)
-==145830==  Uninitialised value was created by a stack allocation
-==145830==    at 0x109FEF: evaluate_expr_sf (hw7.c:251)
-==145830== 
-==145830== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==155724== Memcheck, a memory error detector
+==155724== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==155724== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==155724== Command: ./bin/execute_script script04
+==155724== 
+==155724== Use of uninitialised value of size 8
+==155724==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
+==155724==    by 0x10A507: execute_script_sf (hw7.c:344)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724==  Uninitialised value was created by a stack allocation
+==155724==    at 0x109FEF: evaluate_expr_sf (hw7.c:251)
+==155724== 
+==155724== Invalid write of size 1
+==155724==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
+==155724==    by 0x10A507: execute_script_sf (hw7.c:344)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==155724== 
+==155724== 
+==155724== Process terminating with default action of signal 11 (SIGSEGV)
+==155724==  Access not within mapped region at address 0x0
+==155724==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
+==155724==    by 0x10A507: execute_script_sf (hw7.c:344)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724==  If you believe this happened as a result of a stack
+==155724==  overflow in your program's main thread (unlikely but
+==155724==  possible), you can try to increase the size of the
+==155724==  main thread stack using the --main-stacksize= flag.
+==155724==  The main thread stack size used in this run was 8388608.
+==155724== 
+==155724== HEAP SUMMARY:
+==155724==     in use at exit: 4,734 bytes in 4 blocks
+==155724==   total heap usage: 4 allocs, 0 frees, 4,734 bytes allocated
+==155724== 
+==155724== 46 bytes in 1 blocks are still reachable in loss record 1 of 4
+==155724==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==155724==    by 0x109B91: infix2postfix_sf (hw7.c:185)
+==155724==    by 0x10A029: evaluate_expr_sf (hw7.c:252)
+==155724==    by 0x10A507: execute_script_sf (hw7.c:344)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724== 
+==155724== 120 bytes in 1 blocks are still reachable in loss record 2 of 4
+==155724==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==155724==    by 0x48E6D84: getdelim (iogetdelim.c:65)
+==155724==    by 0x10A545: execute_script_sf (hw7.c:321)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724== 
+==155724== 472 bytes in 1 blocks are still reachable in loss record 3 of 4
+==155724==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==155724==    by 0x48E5E7E: __fopen_internal (iofopen.c:65)
+==155724==    by 0x48E5E7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==155724==    by 0x10A395: execute_script_sf (hw7.c:314)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724== 
+==155724== 4,096 bytes in 1 blocks are still reachable in loss record 4 of 4
+==155724==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==155724==    by 0x48E51B4: _IO_file_doallocate (filedoalloc.c:101)
+==155724==    by 0x48F5523: _IO_doallocbuf (genops.c:347)
+==155724==    by 0x48F2883: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+==155724==    by 0x48E6E0F: getdelim (iogetdelim.c:77)
+==155724==    by 0x10A545: execute_script_sf (hw7.c:321)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724== 
+==155724== LEAK SUMMARY:
+==155724==    definitely lost: 0 bytes in 0 blocks
+==155724==    indirectly lost: 0 bytes in 0 blocks
+==155724==      possibly lost: 0 bytes in 0 blocks
+==155724==    still reachable: 4,734 bytes in 4 blocks
+==155724==         suppressed: 0 bytes in 0 blocks
+==155724== 
+==155724== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==155724== 
+==155724== 1 errors in context 1 of 2:
+==155724== Invalid write of size 1
+==155724==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
+==155724==    by 0x10A507: execute_script_sf (hw7.c:344)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==155724== 
+==155724== 
+==155724== 1 errors in context 2 of 2:
+==155724== Use of uninitialised value of size 8
+==155724==    at 0x10A333: evaluate_expr_sf (hw7.c:307)
+==155724==    by 0x10A507: execute_script_sf (hw7.c:344)
+==155724==    by 0x10940E: main (execute_script.c:8)
+==155724==  Uninitialised value was created by a stack allocation
+==155724==    at 0x109FEF: evaluate_expr_sf (hw7.c:251)
+==155724== 
+==155724== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Segmentation fault (core dumped)

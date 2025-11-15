@@ -1,7 +1,7 @@
 {
   "id": "Criterion v2.4.1",
-  "passed": 34,
-  "failed": 36,
+  "passed": 31,
+  "failed": 39,
   "errored": 0,
   "skipped": 0,
   "test_suites": [
@@ -186,8 +186,8 @@
     },
     {
       "name": "base_execute_valgrind",
-      "passed": 6,
-      "failed": 14,
+      "passed": 3,
+      "failed": 17,
       "errored": 0,
       "skipped": 0,
       "tests": [
@@ -270,16 +270,6 @@
           "messages": ["The test timed out."]
         },
         {
-          "name": "mult_mats02",
-          "assertions": 1,
-          "status": "PASSED"
-        },
-        {
-          "name": "mult_mats01",
-          "assertions": 1,
-          "status": "PASSED"
-        },
-        {
           "name": "script10",
           "assertions": 0,
           "status": "ERRORED",
@@ -287,21 +277,34 @@
         },
         {
           "name": "mult_mats03",
+          "assertions": 0,
+          "status": "ERRORED",
+          "messages": ["The test timed out."]
+        },
+        {
+          "name": "mult_mats02",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "mult_mats01",
+          "assertions": 0,
+          "status": "ERRORED",
+          "messages": ["The test timed out."]
+        },
+        {
+          "name": "add_mats03",
+          "assertions": 0,
+          "status": "ERRORED",
+          "messages": ["The test timed out."]
+        },
+        {
+          "name": "add_mats02",
           "assertions": 1,
           "status": "PASSED"
         },
         {
           "name": "add_mats01",
-          "assertions": 1,
-          "status": "PASSED"
-        },
-        {
-          "name": "add_mats03",
-          "assertions": 1,
-          "status": "PASSED"
-        },
-        {
-          "name": "add_mats02",
           "assertions": 1,
           "status": "PASSED"
         }
@@ -315,6 +318,14 @@
       "skipped": 0,
       "tests": [
         {
+          "name": "trans_mat03",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests/unit_tests.c:85: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
           "name": "trans_mat02",
           "assertions": 1,
           "status": "FAILED",
@@ -331,7 +342,7 @@
           ]
         },
         {
-          "name": "trans_mat03",
+          "name": "script20",
           "assertions": 1,
           "status": "FAILED",
           "messages": [
@@ -340,14 +351,6 @@
         },
         {
           "name": "script19",
-          "assertions": 1,
-          "status": "FAILED",
-          "messages": [
-            "tests/unit_tests.c:85: The output was not what was expected (diff exited with status 1)."
-          ]
-        },
-        {
-          "name": "script20",
           "assertions": 1,
           "status": "FAILED",
           "messages": [
@@ -451,7 +454,7 @@
           ]
         },
         {
-          "name": "add_mats02",
+          "name": "add_mats03",
           "assertions": 1,
           "status": "FAILED",
           "messages": [
@@ -459,7 +462,7 @@
           ]
         },
         {
-          "name": "add_mats03",
+          "name": "add_mats02",
           "assertions": 1,
           "status": "FAILED",
           "messages": [
@@ -484,17 +487,17 @@
       "skipped": 0,
       "tests": [
         {
-          "name": "expr01",
-          "assertions": 3,
-          "status": "PASSED"
-        },
-        {
           "name": "expr02",
           "assertions": 3,
           "status": "PASSED"
         },
         {
           "name": "expr03",
+          "assertions": 3,
+          "status": "PASSED"
+        },
+        {
+          "name": "expr01",
           "assertions": 3,
           "status": "PASSED"
         }
