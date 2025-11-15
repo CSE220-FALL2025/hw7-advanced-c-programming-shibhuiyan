@@ -239,8 +239,8 @@ char* infix2postfix_sf(char *infix) {
                                 while( top >= 0 && isPrecendent(infix[i]) <= isPrecendent(stack[top])) {
                                     result[cursor] = stack[top]; 
                                     cursor++; 
+                                    top--;
                                 }
-                                
                                 top++; 
                                 stack[top] = infix[i]; 
                             }
