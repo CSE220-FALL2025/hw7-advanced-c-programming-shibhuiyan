@@ -268,7 +268,7 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
     int top = -1; 
 
     for (int i = 0; postfix[i] != '\0'; i++) { 
-        if ((postfix[i] >= 'a' && postfix[i] <= 'z') || (postfix[i] >= 'A' && postfix[i] <= 'Z')) { 
+        if ((postfix[i] >= 'A' && postfix[i] <= 'Z')) { 
             matrix_sf *temp = find_bst_sf(postfix[i], root);
                 if (!temp) { 
                     free(postfix); 
@@ -288,7 +288,7 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
                     free_matrix(matrixOperand); 
                 }
             } else 
-                 if (postfix[i] == '*' || '+') { 
+                 if ((postfix[i] == '*') || (postfix[i] == '+') ) { 
                     matrix_sf *rightOperand = stack[top]; 
                     top--; 
                     matrix_sf *leftOperand = stack[top]; 
@@ -296,7 +296,7 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
 
                     matrix_sf *result; 
 
-                    if (postfix[i] = '*') { 
+                    if (postfix[i] == '*') { 
                         result = mult_mats_sf(leftOperand, rightOperand); 
                     } else 
                         if (postfix[i] == '+') { 
