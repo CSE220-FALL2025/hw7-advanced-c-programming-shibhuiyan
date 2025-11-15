@@ -176,24 +176,23 @@ matrix_sf* create_matrix_sf(char name, const char *expr) {
 int isPrecendent(char operator) { 
     int result; 
     if (operator == '+' || operator == '-') {
-        result = -1;
-    }
-
-    if (operator == '*' || operator == '/') { 
-        result = 0; 
-    }
-
-    if (operator == '\'') { 
+        result = 0;
+    } else 
+        if (operator == '*' || operator == '/') { 
         result = 1; 
-    } 
-
-    return result;
-
+        } else 
+             if (operator == '\'') { 
+                result = 2; 
+            } else {
+                result = -1; 
+            } 
+return result;
 }
 
 //////////////////
 
 char* infix2postfix_sf(char *infix) {
+    //help from the article linked in hw PDF and esmaili's cse214 slides, unit 3
     char *result = malloc(strlen(infix) + 1); 
     char stack[100]; 
     int top, cursor; 
@@ -212,6 +211,10 @@ char* infix2postfix_sf(char *infix) {
                 result[cursor] = infix[i]; 
                 cursor++; 
             } else 
+                if (infix[i] = '\'') { 
+                    result[cursor] = '\'';
+                    cursor++;
+                } else 
             // if it is not a proper operand, then check if it is an open parenthesis 
                 if (infix[i] == '(') {
                     top++; 
@@ -226,7 +229,8 @@ char* infix2postfix_sf(char *infix) {
                             cursor++; 
                         }
                         top--; 
-                    } else { // must be an operator 
+                    } else 
+                        if (infix[i] == '+' || infix[i] == '-' || infix[i] == '*' || infix[i] == '/' || infix[i] == '\'') { 
                         while( top >= 0 && isPrecendent(infix[i]) <= isPrecendent(stack[top])) {
                             result[cursor] = stack[top]; 
                             cursor++; 
