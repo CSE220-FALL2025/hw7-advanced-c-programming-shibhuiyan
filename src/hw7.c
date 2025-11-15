@@ -2,12 +2,13 @@
 #include <stdio.h>
 #include <string.h> 
 
-///////////////////////
 bst_sf* insert_bst_sf(matrix_sf *mat, bst_sf *root) {
     // The function creates a new BST if the root is NULL.
     if (!root) { 
         bst_sf *newNode = malloc(sizeof(bst_sf)); 
         newNode->mat = mat; 
+        newNode->left_child = NULL; 
+        newNode->right_child = NULL;
 
         return newNode;  //Return a pointer to the root of the new BST 
     }
@@ -24,14 +25,12 @@ bst_sf* insert_bst_sf(matrix_sf *mat, bst_sf *root) {
 
     return root; // Return a pointer to the root of the updated BST
 }
-////////////////////
 
 matrix_sf* find_bst_sf(char name, bst_sf *root) {
     if (!root) { 
         return NULL; 
     } 
 
-    while(root) { 
     // if the root node contains the matrix in search, return the root node matrix 
         if (root->mat->name == name) { 
             return root-> mat; 
@@ -44,9 +43,7 @@ matrix_sf* find_bst_sf(char name, bst_sf *root) {
                 if (name > root->mat-> name) { 
                     return find_bst_sf(name, root ->right_child); 
                 }
-    }   
 }
-////////////////////
 
 void free_bst_sf(bst_sf *root) {
     if (!root) { 
@@ -59,10 +56,7 @@ void free_bst_sf(bst_sf *root) {
     free(root->mat); 
     free(root); 
 }
-////////////////////
 
-
-///////////////////////////////////////////
 matrix_sf* add_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
     int totalElements = mat1 -> num_cols * mat1 ->num_rows; 
     int *sumValues = malloc(sizeof(int)*totalElements); 
@@ -82,7 +76,6 @@ matrix_sf* add_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
     free(sumValues);
     return resultMat;
 }
-//////////////////////////////////////////
 
 matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
    int numRows = mat1 -> num_rows; 
@@ -114,7 +107,6 @@ matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
    free(productValues); 
    return resultMat; 
 }
-//////////////////////////////////////////
 
 matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
     int numRows = mat->num_rows; 
@@ -124,7 +116,7 @@ matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
 
     for(int i = 0; i < numRows; i++) { 
         for (int j = 0; j < numCols; j++) { 
-            transposedValues[(numRows*j) + i] = mat->values[(numCols*i)+j]; 
+            transposedValues[j*numRows + i] = mat->values[i*numCols + j]; 
         }
     } 
 
@@ -139,7 +131,6 @@ matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
     free(transposedValues); 
     return resultMat; 
 }
-//////////////////////////////////////////
 
 matrix_sf* create_matrix_sf(char name, const char *expr) {
     int numRows, numCols, totalElements; 
@@ -172,7 +163,6 @@ matrix_sf* create_matrix_sf(char name, const char *expr) {
     return newMatrix; 
     // no free in this func b/c we need to put this into BST 
 }
-//////////////////////////////////////
 
 int isPrecendent(char operator) { 
     int result; 
@@ -189,8 +179,6 @@ int isPrecendent(char operator) {
             } 
 return result;
 }
-
-//////////////////
 
 char* infix2postfix_sf(char *infix) {
     //help from the article linked in hw PDF and esmaili's cse214 slides, unit 3
@@ -260,8 +248,6 @@ char* infix2postfix_sf(char *infix) {
   return result; 
 }
 
-/////////////
-
 matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
     char *postfix = infix2postfix_sf(expr); 
 
@@ -324,15 +310,47 @@ matrix_sf* evaluate_expr_sf(char name, char *expr, bst_sf *root) {
     return result; 
 }
 
-////////////// 
 matrix_sf *execute_script_sf(char *filename) {
     FILE *script = fopen(filename, "r"); 
     
-    bst_sf *newNode; 
+    bst_sf *newNode = NULL; 
     matrix_sf *finalMatrix;
+    size_t maxLineLength = MAX_LINE_LEN; 
+    char *currentLine = NULL; 
 
-    
+    while(getline(&currentLine, &maxLineLength, script)) { 
+        char matrixName; 
+        int cursor = 0; 
 
+        while(isspace(currentLine[cursor]) && !currentLine != '\0') { 
+            cursor++; 
+        }
+
+        matrixName = currentLine[cursor]; 
+        cursor++; 
+
+        while(isspace(currentLine[cursor]) && !currentLine != '\0') { 
+            cursor++; 
+        }
+        cursor++; 
+
+        while(isspace(currentLine[cursor]) && !currentLine != '\0') { 
+            cursor++; 
+        }
+
+        if(isdigit(currentLine[cursor])) { 
+            finalMatrix = create_matrix_sf(matrixName, currentLine+cursor); 
+        } else { 
+            finalMatrix = evaluate_expr_sf(matrixName, currentLine+cursor, newNode); 
+        }
+
+        newNode = insert_bst_sf(finalMatrix, newNode);
+        
+        free(currentLine); 
+      
+    }
+    fclose(script);
+    return finalMatrix;
 }
 
 // This is a utility function used during testing. Feel free to adapt the code to implement some of
